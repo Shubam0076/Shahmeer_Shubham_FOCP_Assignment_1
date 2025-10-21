@@ -1,8 +1,16 @@
 //This piece of code deals with the drone's decision making
 #include <iostream>
-#include <conio.h>
-#include <cstdlib>
+#include <ctime>// header file fo random seed with time
+#include <cstdlib> // for rand() and srand()
 using namespace std;
+// Function prototype 
+void startday(); // Greetings
+int get_whether(); // whether
+bool obstaclecheck(); //clearance
+int check(); //functionalities
+void summary();// delivary status
+int malfunction;// maintainence
+// The body of program starts here
 
 int main() {
 
@@ -60,7 +68,14 @@ int main() {
 		battery = battery - battery_drain;
 		cout << "The object was delievered normally. Battery Remaining: " << battery << endl;
 	}
-
-	_getch();
 	return 0;
+	// Function definations
+void startday(){cout<<"Welcome back "<<endl;
+	cout<<"Hello, Good Morning! ";
+	cout<<"Intial battey is 100% ";
+	cout<<"Please Press Enter to start day ";
+	cin.ignore();
+    cin.get();
+}
+int get_whether();
 }
